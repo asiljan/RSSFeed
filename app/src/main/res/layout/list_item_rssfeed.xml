@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/itemFeedHolder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/appPaddingMedium">
+
+    <TextView
+        android:id="@+id/itemFeedPubDate"
+        style="@style/NormalTextSize"
+        android:paddingLeft="@dimen/appPaddingSmall"
+        android:paddingStart="@dimen/appPaddingSmall"
+        android:textColor="@color/appTextColor" />
+
+    <TextView
+        android:id="@+id/itemFeedTitle"
+        style="@style/MediumTextSize"
+        android:layout_marginTop="@dimen/appPaddingSmall"
+        android:maxLines="2"
+        android:paddingEnd="@dimen/appPaddingSmall"
+        android:paddingLeft="@dimen/appPaddingSmall"
+        android:paddingRight="@dimen/appPaddingSmall"
+        android:paddingStart="@dimen/appPaddingSmall"
+        android:textColor="@color/appTextPurpleColor"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/itemFeedDescription"
+        style="@style/MediumTextSize"
+        android:layout_marginTop="@dimen/appPaddingXSmall"
+        android:ellipsize="end"
+        android:maxLines="4"
+        android:paddingEnd="@dimen/appPaddingSmall"
+        android:paddingLeft="@dimen/appPaddingSmall"
+        android:paddingRight="@dimen/appPaddingSmall"
+        android:paddingStart="@dimen/appPaddingSmall"
+        android:textColor="@color/appTextPurpleColor" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/appPaddingSmall"
+        android:background="@color/listItemNewsTextColor" />
+
+</LinearLayout>
