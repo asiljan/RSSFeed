@@ -30,4 +30,32 @@
         <item name="android:textSize">@dimen/appBigTextSize</item>
         <item name="android:textColor">@color/white</item>
     </style>
+
+    <style name="Spinner" parent="Widget.AppCompat.Spinner">
+        <item name="backgroundTint">@color/appTextColor</item>
+    </style>
+
+    <style name="BigTextSize">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/appBigTextSize</item>
+    </style>
+
+    <style name="MediumTextSize">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/appMediumTextSize</item>
+    </style>
+
+    <style name="NormalTextSize">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/appNormalTextSize</item>
+    </style>
+
+    <style name="SmallTextSize">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/appSmallTextSize</item>
+    </style>
 </resources>
