@@ -10,24 +10,34 @@
 
         <include layout="@layout/app_toolbar_layout" />
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="@dimen/appPaddingNormal"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/appPaddingNormal"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" >
 
             <Spinner
                 android:id="@+id/feedsDropDownView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/appPaddingSmall"
+                android:paddingStart="@dimen/appPaddingSmall"
+                style="@style/Spinner"/>
+
+            <View
+                android:id="@+id/dropDownSeparator"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="1dp"
+                android:layout_marginTop="@dimen/appPaddingNormal"
+                android:background="@color/listItemNewsTextColor" />
 
             <include layout="@layout/recycler_view"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="@dimen/appPaddingNormal"
-                android:layout_below="@+id/feedsDropDownView"/>
+                android:layout_marginTop="@dimen/appPaddingNormal" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
     </android.support.design.widget.CoordinatorLayout>
 
