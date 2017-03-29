@@ -1,6 +1,7 @@
 package com.android.rssfeed.di.components;
 
 import com.android.rssfeed.di.modules.PicassoModule;
+import com.android.rssfeed.di.modules.RssFeedModule;
 import com.android.rssfeed.di.scopes.RSSFeedAppScope;
 import com.squareup.picasso.Picasso;
 
@@ -15,4 +16,6 @@ import dagger.Component;
 public interface RssFeedAppComponent {
 
     Picasso picasso();
+
+    RssFeedComponent newRssFeedComponent(RssFeedModule rssFeedModule);
 }
