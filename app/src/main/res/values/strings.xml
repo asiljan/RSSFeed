@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">RSSFeedApp</string>
+
+    <string name="rssFeedToolbarTitle">RSS Feeds</string>
 </resources>
