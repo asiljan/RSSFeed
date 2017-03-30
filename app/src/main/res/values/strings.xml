@@ -2,4 +2,7 @@
     <string name="app_name">RSSFeedApp</string>
 
     <string name="rssFeedToolbarTitle">RSS Feeds</string>
+
+    <!-- menus texts -->
+    <string name="menuAddFeedTitle">Add new feed</string>
 </resources>
