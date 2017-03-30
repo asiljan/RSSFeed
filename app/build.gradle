@@ -51,6 +51,10 @@ dependencies {
 
     //FCM
     compile 'com.google.firebase:firebase-database:10.0.1'
+
+    //RxJava
+    compile 'io.reactivex:rxandroid:1.2.1'
+    compile 'io.reactivex:rxjava:1.2.6'
 }
 
 apply plugin: 'com.google.gms.google-services'
