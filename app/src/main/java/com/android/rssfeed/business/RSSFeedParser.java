@@ -3,6 +3,7 @@ package com.android.rssfeed.business;
 import android.util.Xml;
 
 import com.android.rssfeed.common.helpers.LogHelper;
+import com.android.rssfeed.data.models.FeedImageModel;
 import com.android.rssfeed.data.models.FeedItemModel;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -28,6 +29,7 @@ public class RSSFeedParser extends BaseFeedParser {
             parser.setInput(this.getInputStream(), null);
             int eventType = parser.getEventType();
             FeedItemModel currentMessage = null;
+            FeedImageModel imageModel = null;
             boolean done = false;
             while (eventType != XmlPullParser.END_DOCUMENT && !done) {
                 String name = null;
@@ -37,6 +39,13 @@ public class RSSFeedParser extends BaseFeedParser {
                         break;
                     case XmlPullParser.START_TAG:
                         name = parser.getName();
+                        if (name.equalsIgnoreCase(IMAGE)) {
+                            imageModel = new FeedImageModel();
+                        } else if(imageModel != null) {
+                            if (name.equalsIgnoreCase(IMG_URL)) {
+                                imageModel.setUrl(parser.nextText());
+                            }
+                        }
                         if (name.equalsIgnoreCase(ITEM)) {
                             currentMessage = new FeedItemModel();
                         } else if (currentMessage != null) {
@@ -54,6 +63,7 @@ public class RSSFeedParser extends BaseFeedParser {
                     case XmlPullParser.END_TAG:
                         name = parser.getName();
                         if (name.equalsIgnoreCase(ITEM) && currentMessage != null) {
+                            currentMessage.setImage(imageModel);
                             messages.add(currentMessage);
                         } else if (name.equalsIgnoreCase(CHANNEL)) {
                             done = true;

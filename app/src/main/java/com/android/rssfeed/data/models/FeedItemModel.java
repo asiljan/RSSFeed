@@ -21,6 +21,7 @@ public class FeedItemModel {
     @SerializedName("link")
     @Expose
     private String mLink;
+    private FeedImageModel mImage;
 
     public String getPubDate() {
         return mPubDate;
@@ -52,5 +53,13 @@ public class FeedItemModel {
 
     public void setLink(String mLink) {
         this.mLink = mLink;
+    }
+
+    public FeedImageModel getImage() {
+        return mImage;
+    }
+
+    public void setImage(FeedImageModel mImage) {
+        this.mImage = mImage;
     }
 }
