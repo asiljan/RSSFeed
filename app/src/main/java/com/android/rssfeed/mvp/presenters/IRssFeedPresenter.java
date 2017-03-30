@@ -6,4 +6,5 @@ package com.android.rssfeed.mvp.presenters;
  */
 
 public interface IRssFeedPresenter extends IBasePresenter {
+    void onFeedSelected(int position);
 }
