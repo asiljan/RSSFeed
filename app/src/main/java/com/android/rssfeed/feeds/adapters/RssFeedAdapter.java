@@ -44,7 +44,7 @@ public class RssFeedAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         RssFeedItemViewHolder feedItemViewHolder = (RssFeedItemViewHolder) holder;
 
-        feedItemViewHolder.bindData(itemModel);
+        feedItemViewHolder.bindData(itemModel, mPicasso);
     }
 
     @Override

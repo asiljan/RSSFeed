@@ -2,6 +2,7 @@ package com.android.rssfeed.feeds.viewholders;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -9,6 +10,7 @@ import com.android.rssfeed.R;
 import com.android.rssfeed.common.helpers.DateTimeHelper;
 import com.android.rssfeed.data.events.RssFeedItemClickEvent;
 import com.android.rssfeed.data.models.FeedItemModel;
+import com.squareup.picasso.Picasso;
 
 import org.greenrobot.eventbus.EventBus;
 
@@ -30,6 +32,8 @@ public class RssFeedItemViewHolder extends RecyclerView.ViewHolder implements Vi
     TextView mFeedTitle;
     @BindView(R.id.itemFeedDescription)
     TextView mFeedDescription;
+    @BindView(R.id.itemFeedIcon)
+    ImageView mFeedIcon;
 
     String mFeedWebsiteUrl;
 
@@ -39,8 +43,13 @@ public class RssFeedItemViewHolder extends RecyclerView.ViewHolder implements Vi
         ButterKnife.bind(this, itemView);
     }
 
-    public void bindData(FeedItemModel feedItemModel) {
+    public void bindData(FeedItemModel feedItemModel, Picasso picasso) {
         this.mFeedWebsiteUrl = feedItemModel.getLink();
+
+        picasso
+                .load(feedItemModel.getImage().getUrl())
+                .into(mFeedIcon);
+
         mFeedDate.setText(DateTimeHelper.getDateAndTime(DateTimeHelper.FEED_DEFAULT_TIME_FORMAT,
                 feedItemModel.getPubDate(), DateTimeHelper.FEED_LIST_ITEM_TIME_FORMAT));
 
