@@ -1,6 +1,7 @@
 package com.android.rssfeed.di.components;
 
 import com.android.rssfeed.business.IRxJavaSchedulers;
+import com.android.rssfeed.di.modules.AddFeedModule;
 import com.android.rssfeed.di.modules.PicassoModule;
 import com.android.rssfeed.di.modules.RssFeedModule;
 import com.android.rssfeed.di.modules.RxJavaModule;
@@ -22,4 +23,6 @@ public interface RssFeedAppComponent {
     IRxJavaSchedulers rxJavaSchedulers();
 
     RssFeedComponent newRssFeedComponent(RssFeedModule rssFeedModule);
+
+    AddFeedComponent newAddFeedComponent(AddFeedModule addFeedModule);
 }
