@@ -16,6 +16,7 @@ import android.widget.Spinner;
 
 import com.android.rssfeed.R;
 import com.android.rssfeed.common.BaseFragment;
+import com.android.rssfeed.common.helpers.LogHelper;
 import com.android.rssfeed.data.models.FeedItemModel;
 import com.android.rssfeed.di.components.RssFeedAppComponent;
 import com.android.rssfeed.di.modules.RssFeedModule;
@@ -60,8 +61,8 @@ public class RssFeedsFragment extends BaseFragment implements RssFeedView, Adapt
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
+    public void onResume() {
+        super.onResume();
         mPresenter.onStart();
     }
 
@@ -107,11 +108,15 @@ public class RssFeedsFragment extends BaseFragment implements RssFeedView, Adapt
 
     @Override
     public void onRssFeedsFetched(String[] feedItems) {
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(getContext(),
-                android.R.layout.simple_spinner_item, feedItems);
-        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        mDropDownMenu.setOnItemSelectedListener(this);
-        mDropDownMenu.setAdapter(dataAdapter);
+        if (getContext() != null && !getActivity().isFinishing()) {
+
+            ArrayAdapter<String> dataAdapter = new ArrayAdapter<>(getContext(),
+                    android.R.layout.simple_spinner_item, feedItems);
+            dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+            mDropDownMenu.setOnItemSelectedListener(this);
+            mDropDownMenu.setAdapter(dataAdapter);
+        }
     }
 
     @Override
@@ -149,5 +154,11 @@ public class RssFeedsFragment extends BaseFragment implements RssFeedView, Adapt
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mPresenter.onDestroy();
     }
 }
