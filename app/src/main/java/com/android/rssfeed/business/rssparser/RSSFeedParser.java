@@ -1,4 +1,4 @@
-package com.android.rssfeed.business;
+package com.android.rssfeed.business.rssparser;
 
 import android.util.Xml;
 
