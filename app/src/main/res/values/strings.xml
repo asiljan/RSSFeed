@@ -2,6 +2,8 @@
     <string name="app_name">RSSFeedApp</string>
 
     <string name="rssFeedToolbarTitle">RSS Feeds</string>
+    <string name="rssFeedUrlNotValid">Please enter a valid RSS url</string>
+    <string name="buttonAddFeed">ADD FEED</string>
 
     <!-- menus texts -->
     <string name="menuAddFeedTitle">Add new feed</string>
