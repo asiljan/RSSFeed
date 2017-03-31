@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/appButtonHolder"
+    android:background="@drawable/btn_shape_background_stroke_red"
+    android:padding="@dimen/appPaddingNormal"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/appButtonText"
+        style="@style/MediumTextSize"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
