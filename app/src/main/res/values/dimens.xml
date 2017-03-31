@@ -20,4 +20,7 @@
     <dimen name="appBigTextSize">19sp</dimen>
     <dimen name="appExtraBigTextSize">22sp</dimen>
 
+    <!-- other margins -->
+    <dimen name="buttonViewCornerRadius">6dp</dimen>
+
 </resources>
