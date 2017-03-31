@@ -20,7 +20,7 @@
             <TextView
                 style="@style/MediumTextSize"
                 android:textColor="@color/appTextPurpleColor"
-                android:text="Add new feed"/>
+                android:text="@string/menuAddFeedTitle"/>
 
             <EditText
                 android:id="@+id/addFeedInputView"
@@ -31,7 +31,7 @@
                 android:layout_marginTop="@dimen/appPaddingMedium"
                 android:inputType="text"
                 android:maxLines="1"
-                android:hint="Enter feed url"/>
+                android:hint="@string/rssNewFeedHintText"/>
 
             <com.android.rssfeed.common.views.AppButtonView
                 xmlns:appButton="http://schemas.android.com/apk/res-auto"
