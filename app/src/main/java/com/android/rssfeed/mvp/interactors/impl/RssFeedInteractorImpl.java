@@ -1,7 +1,7 @@
 package com.android.rssfeed.mvp.interactors.impl;
 
 import com.android.rssfeed.business.IRxJavaSchedulers;
-import com.android.rssfeed.business.RSSFeedParser;
+import com.android.rssfeed.business.rssparser.RSSFeedParser;
 import com.android.rssfeed.common.AppConstants;
 import com.android.rssfeed.data.models.FeedItemModel;
 import com.android.rssfeed.data.models.RssFeedModel;

@@ -44,7 +44,7 @@ public class RssFeedPresenterImpl extends BasePresenter implements IRssFeedPrese
 
     @Override
     public void onDestroy() {
-
+        unsubscribeAll();
     }
 
     @Override
