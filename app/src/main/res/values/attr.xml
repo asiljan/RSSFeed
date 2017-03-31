@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AppButtonView">
+        <attr name="appButtonBackgroundDrawable" format="reference" />
+        <attr name="appButtonText" format="string" />
+        <attr name="appButtonTextColor" format="color" />
+    </declare-styleable>
+</resources>
