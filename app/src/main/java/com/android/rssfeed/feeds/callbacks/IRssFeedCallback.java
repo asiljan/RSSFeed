@@ -8,5 +8,7 @@ package com.android.rssfeed.feeds.callbacks;
 public interface IRssFeedCallback {
     void onRssFeedClicked(String url);
 
+    void onAddNewFeedReuqest();
+
     void onBackRequest();
 }
